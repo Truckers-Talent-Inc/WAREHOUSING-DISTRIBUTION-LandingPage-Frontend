@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PartnerLeadController; 
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Redirecciones al sitio principal
-Route::get('/login', function () { return redirect('https://www.truckerstalent.com/'); })->name('login');
+
+
