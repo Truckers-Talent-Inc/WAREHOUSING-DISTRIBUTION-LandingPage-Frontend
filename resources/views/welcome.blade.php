@@ -82,7 +82,7 @@
                 <a href="#faq" class="hover:text-white hover:border-b border-white transition pb-1">FAQ</a>
             </div>
             <div>
-                <a href="https://www.truckerstalent.com/login" class="bg-safety-yellow text-black px-6 py-2 rounded-sm text-xs font-bold uppercase tracking-wide hover:bg-white transition shadow-lg">
+                <a href="https://www.truckerstalent.com/start" class="bg-safety-yellow text-black px-6 py-2 rounded-sm text-xs font-bold uppercase tracking-wide hover:bg-white transition shadow-lg">
                     Login
                 </a>
             </div>
@@ -97,6 +97,7 @@
 
         <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-10">
             
+            <!-- HERO LEFT SIDE -->
             <div class="text-white">
                 <div class="flex items-center gap-2 mb-6 animate-slide-up">
                     <div class="h-1 w-12 bg-safety-yellow"></div>
@@ -112,15 +113,16 @@
                     The specialized job board for <strong>Warehouses, Distribution Centers, and E-commerce Fulfillment</strong>. Stop using generic sites and connect directly with industry professionals.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 animate-slide-up" style="animation-delay: 0.3s;">
-                    <a href="https://www.truckerstalent.com/login" class="px-8 py-4 bg-safety-yellow text-black font-black uppercase tracking-widest text-sm hover:bg-white transition shadow-[0_0_20px_rgba(245,158,11,0.4)] text-center">
+                    <a href="https://www.truckerstalent.com/start" class="px-8 py-4 bg-safety-yellow text-black font-black uppercase tracking-widest text-sm hover:bg-white transition shadow-[0_0_20px_rgba(245,158,11,0.4)] text-center">
                         Post Open Roles
                     </a>
-                    <a href="https://www.truckerstalent.com/login" class="px-8 py-4 border border-white/30 text-white font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition text-center">
+                    <a href="https://www.truckerstalent.com/start" class="px-8 py-4 border border-white/30 text-white font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition text-center">
                         Find Warehouse Jobs
                     </a>
                 </div>
             </div>
 
+            <!-- HERO RIGHT SIDE: Partner Solutions Buttons -->
             <div id="hero-actions" class="hidden lg:flex flex-col justify-center relative z-30 animate-slide-up" style="animation-delay: 0.5s;">
                 <div class="absolute -top-10 -right-10 w-64 h-64 bg-safety-yellow/10 rounded-full blur-3xl pointer-events-none"></div>
                 
@@ -130,13 +132,14 @@
                     
                     <div class="space-y-4">
                         <a href="#corporate-forms" onclick="switchTab('capacity')" class="block w-full py-4 bg-safety-yellow text-black font-black uppercase tracking-widest text-xs text-center rounded hover:bg-white transition shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-                            Truck Capacity Request
+                            Request Freight Capacity
                         </a>
                         <a href="#corporate-forms" onclick="switchTab('factoring')" class="block w-full py-4 bg-gray-800 border border-gray-600 text-white font-bold uppercase tracking-widest text-xs text-center rounded hover:bg-gray-700 transition">
                             Apply for Factoring (RTS)
                         </a>
                     </div>
-
+                    
+                  
                 </div>
             </div>
 
@@ -292,7 +295,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="https://www.truckerstalent.com/login" class="mt-8 inline-block text-safety-yellow font-black uppercase tracking-widest border-b-2 border-safety-yellow pb-1 hover:text-yellow-600 transition">
+                    <a href="https://www.truckerstalent.com/start" class="mt-8 inline-block text-safety-yellow font-black uppercase tracking-widest border-b-2 border-safety-yellow pb-1 hover:text-yellow-600 transition">
                         Start Posting Jobs &rarr;
                     </a>
                 </div>
@@ -325,7 +328,7 @@
                             <span>Apply with one click using your digital resume.</span>
                         </li>
                     </ul>
-                    <a href="https://www.truckerstalent.com/login" class="px-8 py-4 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-gray-200 transition">
+                    <a href="https://www.truckerstalent.com/start" class="px-8 py-4 bg-white text-black font-black uppercase tracking-widest text-sm hover:bg-gray-200 transition">
                         Create Your Profile
                     </a>
                 </div>
@@ -358,26 +361,34 @@
         </div>
     </section>
 
+    <!-- ========================================== -->
+    <!-- B2B CORPORATE FORMS SECTION                -->
+    <!-- ========================================== -->
     <section id="corporate-forms" class="py-24 bg-gray-900 relative border-y-4 border-black scroll-mt-20">
+        <!-- Patrón de fondo sutil -->
         <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#f59e0b 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="container mx-auto px-6 max-w-6xl relative z-20">
             
             <div class="text-center mb-12">
                 <span class="text-safety-yellow font-bold uppercase tracking-[0.2em] text-xs mb-3 block">Corporate Onboarding</span>
-                <h2 class="text-4xl font-black text-white uppercase mb-4">Partner Solutions</h2>
+                <h2 class="text-4xl font-black text-white uppercase mb-4">Partner <span class="text-white bg-clip-text bg-gradient-to-r from-safety-yellow to-white">Solutions</span></h2>
                 <p class="text-gray-400 max-w-2xl mx-auto text-lg">Select a service below to securely submit your intake details to our specialized logistics network.</p>
             </div>
 
+            <!-- TABS NAVIGATION -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 max-w-4xl mx-auto">
                 <button onclick="switchTab('capacity')" id="tab-capacity" class="flex-1 py-4 px-6 bg-safety-yellow text-black font-black uppercase tracking-widest text-sm rounded shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all">
-                    Truck Capacity Request
+                    Capacity Request & Intake
                 </button>
                 <button onclick="switchTab('factoring')" id="tab-factoring" class="flex-1 py-4 px-6 bg-gray-800 border border-gray-700 text-gray-400 font-bold uppercase tracking-widest text-sm rounded hover:bg-gray-700 transition-all">
                     Factoring Services
                 </button>
             </div>
 
+            <!-- ========================================== -->
+            <!-- FORMULARIO 1: CAPACITY REQUEST & SHIPPER   -->
+            <!-- ========================================== -->
             <div id="form-capacity" class="block bg-gray-800/90 backdrop-blur-md p-8 md:p-12 rounded-lg border-t-8 border-safety-yellow border border-gray-700 shadow-2xl max-w-5xl mx-auto">
                 <div class="mb-10 pb-6 border-b border-gray-700 flex justify-between items-end">
                     <div>
@@ -390,6 +401,7 @@
                 </div>
 
                 <form action="#" method="POST" class="space-y-12">
+                    <!-- 01. Company Information -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 01. Company Information
@@ -432,6 +444,7 @@
                         </div>
                     </div>
 
+                    <!-- 02. Shipping Capacity Requirements -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 02. Shipping Capacity Requirements
@@ -502,8 +515,9 @@
                         </div>
                     </div>
 
+                    <!-- 03. Origin & Destination -->
                     <div>
-                        <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
+                        <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-800 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 03. Origin & Destination
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
@@ -559,6 +573,7 @@
                         <input type="text" name="accessorials_other" placeholder="Other special instructions:" class="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none">
                     </div>
 
+                    <!-- 04. Payment & Agreement -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 04. Payment & Agreement
@@ -611,6 +626,9 @@
                 </form>
             </div>
 
+            <!-- ========================================== -->
+            <!-- FORMULARIO 2: FACTORING SERVICES           -->
+            <!-- ========================================== -->
             <div id="form-factoring" class="hidden bg-gray-800/90 backdrop-blur-md p-8 md:p-12 rounded-lg border-t-8 border-safety-yellow border border-gray-700 shadow-2xl max-w-5xl mx-auto">
                 <div class="mb-10 pb-6 border-b border-gray-700 flex justify-between items-end">
                     <div>
@@ -623,6 +641,7 @@
                 </div>
 
                 <form action="#" method="POST" enctype="multipart/form-data" class="space-y-12">
+                    <!-- 01. Carrier Details -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 01. Company Information
@@ -678,6 +697,7 @@
                         </div>
                     </div>
 
+                    <!-- 02. Operations Profile -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 02. Operations Profile
@@ -727,6 +747,7 @@
                         </div>
                     </div>
 
+                    <!-- 03. Current Factoring Status -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 03. Current Factoring Status
@@ -766,6 +787,7 @@
                         </div>
                     </div>
 
+                    <!-- 04. Funding Requirements & Add-ons -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 04. Funding Requirements & Services
@@ -815,6 +837,7 @@
                         </div>
                     </div>
 
+                    <!-- 05. Required Documents -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 05. Documents & Authorization
@@ -929,6 +952,13 @@
     </section>
 
     <footer class="bg-black text-gray-600 py-12 text-center text-xs font-light tracking-wide border-t border-gray-900">
+        <!-- Internal Links Agregados -->
+        <div class="flex flex-col md:flex-row justify-center gap-6 mb-8 uppercase tracking-widest text-[10px] font-bold text-gray-500">
+            <a href="https://trucking.truckerstalent.com/" class="hover:text-white transition">Explore trucking jobs</a>
+            <a href="https://ocean.truckerstalent.com/" class="hover:text-white transition">Discover ocean freight careers</a>
+            <a href="https://air.truckerstalent.com/" class="hover:text-white transition">Find air cargo logistics jobs</a>
+        </div>
+
         <div class="flex justify-center items-center gap-2 mb-4 opacity-50">
             <img src="img/truckerlogo.svg" class="h-24">
             <span class="font-bold uppercase tracking-widest">Truckers Talent</span>
