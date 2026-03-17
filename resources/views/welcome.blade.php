@@ -400,7 +400,230 @@
                     </div>
                 </div>
 
-                x
+                <form action="#" method="POST" class="space-y-12">
+                    <!-- 01. Company Information -->
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
+                            <span class="text-safety-yellow">></span> 01. Company Information
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Legal Company Name *</label>
+                                <input type="text" name="company_name" required class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow focus:ring-1 focus:ring-safety-yellow outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">DBA (If Applicable)</label>
+                                <input type="text" name="dba" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">MC / DOT Number (If Applicable)</label>
+                                <input type="text" name="mc_dot" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Business Address *</label>
+                                <input type="text" name="business_address" required class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition mb-2">
+                                <input type="text" name="city_state_zip" required placeholder="City / State / ZIP" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Main Contact Name *</label>
+                                <input type="text" name="contact_name" required class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition mb-2">
+                                <input type="text" name="contact_title" placeholder="Title" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Phone Number *</label>
+                                <input type="tel" name="phone" required class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Email Address *</label>
+                                <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Billing Email (If Different)</label>
+                                <input type="email" name="billing_email" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none transition">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02. Shipping Capacity Requirements -->
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
+                            <span class="text-safety-yellow">></span> 02. Shipping Capacity Requirements
+                        </h4>
+                        
+                        <div class="mb-6">
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-3">1. Freight Type</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-gray-300 mb-2">
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Dry Van" class="accent-safety-yellow"> Dry Van</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Flatbed" class="accent-safety-yellow"> Flatbed</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Reefer" class="accent-safety-yellow"> Reefer</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Step Deck" class="accent-safety-yellow"> Step Deck</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Hazmat" class="accent-safety-yellow"> Hazmat</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Power Only" class="accent-safety-yellow"> Power Only</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" name="freight_type[]" value="Specialized / Oversized" class="accent-safety-yellow"> Specialized / Oversized</label>
+                            </div>
+                            <input type="text" name="freight_type_other" placeholder="Other:" class="w-full md:w-1/2 bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">2. Commodity Description (Please be specific)</label>
+                                <input type="text" name="commodity_description" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">3. Average Weight Per Load (lbs)</label>
+                                <input type="number" name="avg_weight" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">4. Dimensions (if applicable)</label>
+                                <div class="flex gap-2">
+                                    <input type="text" name="dim_length" placeholder="Length" class="w-1/3 bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                                    <input type="text" name="dim_width" placeholder="Width" class="w-1/3 bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                                    <input type="text" name="dim_height" placeholder="Height" class="w-1/3 bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">5. Temperature Requirements (If Reefer)</label>
+                                <input type="text" name="temp_reqs" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-3">6. Is Freight Palletized?</label>
+                                <div class="flex gap-4 mb-2">
+                                    <label class="flex items-center gap-2 text-sm text-gray-300"><input type="radio" name="is_palletized" value="Yes" class="accent-safety-yellow"> Yes</label>
+                                    <label class="flex items-center gap-2 text-sm text-gray-300"><input type="radio" name="is_palletized" value="No" class="accent-safety-yellow"> No</label>
+                                    <label class="flex items-center gap-2 text-sm text-gray-300"><input type="radio" name="is_palletized" value="Mixed" class="accent-safety-yellow"> Mixed</label>
+                                </div>
+                                <input type="text" name="num_pallets" placeholder="If palletized, how many pallets?" class="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-3">7. Loading & Unloading Method</label>
+                                <div class="grid grid-cols-2 gap-2 text-sm text-gray-300 mb-2">
+                                    <label class="flex items-center gap-2"><input type="checkbox" name="load_method[]" value="Dock High" class="accent-safety-yellow"> Dock High</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" name="load_method[]" value="Ground Load" class="accent-safety-yellow"> Ground Load</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" name="load_method[]" value="Forklift Required" class="accent-safety-yellow"> Forklift Required</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" name="load_method[]" value="Crane Required" class="accent-safety-yellow"> Crane Required</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" name="load_method[]" value="Live Load" class="accent-safety-yellow"> Live Load</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" name="load_method[]" value="Drop & Hook" class="accent-safety-yellow"> Drop & Hook</label>
+                                </div>
+                                <input type="text" name="load_method_other" placeholder="Other:" class="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03. Origin & Destination -->
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-800 pb-2 flex items-center gap-2">
+                            <span class="text-safety-yellow">></span> 03. Origin & Destination
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Primary Origin Location(s) - City / State:</label>
+                                <input type="text" name="origin_location" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none mb-3">
+                                
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Facility Type:</label>
+                                <div class="flex flex-wrap gap-3 text-sm text-gray-300">
+                                    <label class="flex items-center gap-2"><input type="radio" name="origin_facility" value="Warehouse" class="accent-safety-yellow"> Warehouse</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="origin_facility" value="Plant" class="accent-safety-yellow"> Plant</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="origin_facility" value="Port" class="accent-safety-yellow"> Port</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="origin_facility" value="Rail" class="accent-safety-yellow"> Rail</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="origin_facility" value="Other" class="accent-safety-yellow"> Other</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Primary Destination Location(s) - City / State:</label>
+                                <input type="text" name="destination_location" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none mb-3">
+                                
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Facility Type:</label>
+                                <div class="flex flex-wrap gap-3 text-sm text-gray-300">
+                                    <label class="flex items-center gap-2"><input type="radio" name="dest_facility" value="Warehouse" class="accent-safety-yellow"> Warehouse</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="dest_facility" value="Distribution Center" class="accent-safety-yellow"> Distribution Center</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="dest_facility" value="Retail" class="accent-safety-yellow"> Retail</label>
+                                    <label class="flex items-center gap-2"><input type="radio" name="dest_facility" value="Other" class="accent-safety-yellow"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Frequency of Loads</label>
+                            <div class="flex flex-wrap gap-4 text-sm text-gray-300">
+                                <label class="flex items-center gap-2"><input type="radio" name="load_frequency" value="One Time" class="accent-safety-yellow"> One Time</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="load_frequency" value="Weekly" class="accent-safety-yellow"> Weekly</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="load_frequency" value="2-5 Loads per Week" class="accent-safety-yellow"> 2-5 Loads per Week</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="load_frequency" value="5-10 Loads per Week" class="accent-safety-yellow"> 5-10 Loads per Week</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="load_frequency" value="10+ Loads per Week" class="accent-safety-yellow"> 10+ Loads per Week</label>
+                            </div>
+                        </div>
+
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-3 mt-6">Accessorial Requirements</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-gray-300 mb-4">
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Appointment Required" class="accent-safety-yellow"> Appointment Required</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Detention Policy" class="accent-safety-yellow"> Detention Policy</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Lumper Required" class="accent-safety-yellow"> Lumper Required</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Tarps Required" class="accent-safety-yellow"> Tarps Required</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Chains Required" class="accent-safety-yellow"> Chains Required</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Hazmat Documents Required" class="accent-safety-yellow"> Hazmat Documents Required</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="TWIC Required" class="accent-safety-yellow"> TWIC Required</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" name="accessorials[]" value="Driver Assist" class="accent-safety-yellow"> Driver Assist</label>
+                        </div>
+                        <input type="text" name="accessorials_other" placeholder="Other special instructions:" class="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none">
+                    </div>
+
+                    <!-- 04. Payment & Agreement -->
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
+                            <span class="text-safety-yellow">></span> 04. Payment & Agreement
+                        </h4>
+                        
+                        <div class="mb-6">
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Preferred Payment Terms:</label>
+                            <div class="flex gap-4 text-sm text-gray-300 mb-3">
+                                <label class="flex items-center gap-2"><input type="radio" name="payment_terms" value="Quick Pay" class="accent-safety-yellow"> Quick Pay</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="payment_terms" value="Net 15" class="accent-safety-yellow"> Net 15</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="payment_terms" value="Net 30" class="accent-safety-yellow"> Net 30</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="payment_terms" value="Net 45" class="accent-safety-yellow"> Net 45</label>
+                            </div>
+                            <input type="text" name="credit_references" placeholder="Credit References (Optional)" class="w-full bg-gray-900 border border-gray-600 rounded p-3 text-sm text-white focus:border-safety-yellow outline-none">
+                        </div>
+
+                        <div class="bg-gray-900 p-6 border border-gray-700 rounded mb-6 border-l-4 border-safety-yellow">
+                            <h5 class="text-white font-bold mb-2">Capacity Lock-In Agreement</h5>
+                            <p class="text-xs text-gray-400 mb-4">To ensure reliable truck availability and stable pricing, Truckers Talent INC and Aetna Freight Lines INC offer a Capacity Lock Program. After successful completion of 2-3 trial loads, we offer the option to enter into a commitment.</p>
+                            
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Are you open to discussing a 6-12 month contract after initial trial loads?</label>
+                            <div class="flex flex-wrap gap-4 text-sm text-gray-300">
+                                <label class="flex items-center gap-2"><input type="radio" name="capacity_lock" value="Yes - 6 Month" class="accent-safety-yellow"> Yes, 6-Month</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="capacity_lock" value="Yes - 12 Month" class="accent-safety-yellow"> Yes, 12-Month</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="capacity_lock" value="No" class="accent-safety-yellow"> No</label>
+                                <label class="flex items-center gap-2"><input type="radio" name="capacity_lock" value="Maybe" class="accent-safety-yellow"> Maybe - Need More Details</label>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-900/50 p-6 border border-gray-700 rounded">
+                            <h5 class="text-white font-bold mb-2">Authorization</h5>
+                            <p class="text-xs text-gray-400 mb-4">By submitting this form, the shipper confirms that all provided information is accurate and understands that final rates depend on operational review.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Authorized Representative Name *</label>
+                                    <input type="text" name="auth_name" required class="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Date *</label>
+                                    <input type="date" name="auth_date" required class="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-white focus:border-safety-yellow outline-none text-gray-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-5 bg-safety-yellow text-black font-black uppercase tracking-widest text-sm rounded hover:bg-white transition shadow-[0_0_20px_rgba(245,158,11,0.4)]">
+                        Submit Capacity Request
+                    </button>
+                </form>
             </div>
 
             <!-- ========================================== -->
@@ -417,7 +640,7 @@
                     </div>
                 </div>
 
-                <form action="email" method="POST" enctype="multipart/form-data" class="space-y-12">
+                <form action="#" method="POST" enctype="multipart/form-data" class="space-y-12">
                     <!-- 01. Carrier Details -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
