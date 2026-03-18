@@ -70,8 +70,19 @@ class PartnerController extends Controller
     'additional_services' => 'nullable',
     'bundled_services' => 'nullable',
     'doc_checklist' => 'nullable',
-    'documents' => 'nullable',
 ]);
+
+	$files = $request->file('documents');
+
+	$paths = [];
+
+if ($request->hasFile('documents')) {
+    foreach ($request->file('documents') as $file) {
+        $path = $file->store('documents');
+        $paths[] = $path;
+    }
+}
+
 
         $messageBody = "New Company Application:\n\n";
         foreach ($data as $key => $value) {
@@ -81,15 +92,19 @@ class PartnerController extends Controller
             $messageBody .= ucfirst(str_replace('_', ' ', $key)) . ": {$value}\n";
         }
 
-        $to = 'valentin.faciano.dev@gmail.com';
+        $to = 'info@truckerstalent.com';
         $subject = "Company Application: {$data['company_name']}";
 
         try {
-            Mail::raw($messageBody, function ($message) use ($to, $subject) {
-                $message->to($to)
-                        ->subject($subject)
-                        ->from(config('mail.from.address'), config('mail.from.name'));
-            })->queue();
+   	    Mail::send('emails.company', ['data' => $data], function ($message) use ($to, $subject, $paths) {
+    $message->to($to)
+        ->subject($subject)
+        ->from(config('mail.from.address'), config('mail.from.name'));
+
+    foreach ($paths as $path) {
+        $message->attach(storage_path('app/' . $path));
+    }
+});
 
             return back()->with('success', 'Email sent successfully.');
         } catch (\Exception $e) {
