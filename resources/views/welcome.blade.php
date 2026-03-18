@@ -400,8 +400,9 @@
                     </div>
                 </div>
 
-                <form action="#" method="POST" class="space-y-12">
-                    <!-- 01. Company Information -->
+                <form action="{{ route('partner.store') }}"  method="POST" class="space-y-12">
+		    <!-- 01. Company Information -->
+			@csrf
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 01. Company Information
@@ -640,8 +641,9 @@
                     </div>
                 </div>
 
-                <form action="#" method="POST" enctype="multipart/form-data" class="space-y-12">
-                    <!-- 01. Carrier Details -->
+               <form action="{{ route('partner.store') }}"  method="POST" class="space-y-12">
+                 
+                        @csrf  <!-- 01. Carrier Details -->
                     <div>
                         <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
                             <span class="text-safety-yellow">></span> 01. Company Information
