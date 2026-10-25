@@ -1004,5 +1004,14 @@
         });
     </script>
 
+
+<!-- CDL-TMS-SEO-PARTNER-V1: relevant contextual content; existing SEO tags untouched -->
+<section id="fleet-tms-resources" aria-labelledby="fleet-tms-resources-heading" style="max-width:1100px;margin:48px auto;padding:28px 24px;background:#f8fafc;color:#182b3c;border:1px solid #cbd5e1;border-radius:16px;font:16px/1.7 system-ui,sans-serif">
+  <p style="font-weight:700;font-size:12px;letter-spacing:.09em;color:#9a3412">RELATED TECHNOLOGY · CDL RECRUITERS LLC</p>
+  <h2 id="fleet-tms-resources-heading" style="font-size:clamp(23px,3vw,34px);line-height:1.25;font-weight:800;margin:10px 0">WMS and trucking TMS: connected but different</h2>
+  <p>A warehouse management system organizes facility inventory and fulfillment, while carrier transportation management software organizes loads, drivers, trucks and dispatch. Truckers Talent specializes in hiring warehouse staff; CDL Recruiters TMS can be explored by trucking fleets handling warehouse pickups and deliveries. It is not a WMS replacement.</p>
+  <p><a style="color:#9a3412;text-decoration:underline;font-weight:700" href="https://www.cdl-tms.com/">Explore CDL Recruiters TMS</a> &nbsp;·&nbsp; <a style="color:#9a3412;text-decoration:underline;font-weight:700" href="https://tms.cdl-recruiters.com/api/cdl/billing/trial/start">Start the seven-day free trial</a></p>
+</section>
+<!-- /CDL-TMS-SEO-PARTNER-V1 -->
 </body>
 </html>
